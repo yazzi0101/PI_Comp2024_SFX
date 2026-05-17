@@ -1,0 +1,12 @@
+# Ignorar arquivos objetos intermediários
+src/core/*.o
+src/*.o
+application/**/*.o
+
+# Ignorar os binários finais compilados
+sfx_server
+local_news_service
+
+# Ignorar arquivos temporários do sistema ou do editor
+.DS_Store
+*.swp

@@ -1,0 +1,10 @@
+CREATE DATABASE sfx_db;
+
+\c sfx_db;
+
+CREATE TABLE news (
+    id SERIAL PRIMARY KEY,
+    title VARCHAR(128) NOT NULL,
+    body TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);

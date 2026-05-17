@@ -1,0 +1,10 @@
+GET /home = ./application/home/home.html
+GET /home.css = ./application/home/home.css
+GET /home.js = ./application/home/home.js
+GET /user = auth.sock
+POST /login = auth.sock
+
+GET /local_news = ./application/local_news/pages/local_news.html
+GET /local_news.css = ./application/local_news/pages/local_news.css
+GET /local_news.js = ./application/local_news/pages/local_news.js
+POST /news = /tmp/news.sock
