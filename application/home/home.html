@@ -1,19 +1,212 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <link rel="stylesheet" href="home.css">
-    
-    <title>São Francisco Xavier</title>
-</head>
-<body>
-    <h1>Hello World de São Francisco Xavier!</h1>
-    <p>Este arquivo foi entregue de forma assíncrona usando a system call sendfile do Kernel Linux em C puro.</p>
 
-    <script src="app.js"></script>
+    <title>Conecta SFX</title>
+
+    <link rel="stylesheet" href="home.css">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+            <div class="logo-icon"></div>
+            <div>
+                <h2>SFX Core</h2>
+            </div>
+        </div>
+
+        <nav class="menu">
+
+            <a href="/home" class="active">
+                🏠 Página Inicial
+            </a>
+
+            <a href="/publicar_noticia">
+                📰 Publicar Notícia
+            </a>
+
+            <a href="/servicos">
+                ⚙️ Serviços
+            </a>
+
+            <a href="/perfil">
+                👤 Meu Perfil
+            </a>
+
+            <a href="/sobre">
+                ℹ️ Sobre Nós
+            </a>
+
+        </nav>
+
+        <div class="server-box">
+
+            <h3>Servidor</h3>
+
+            <div class="status">
+                <span class="online-dot"></span>
+                ONLINE
+            </div>
+
+        </div>
+
+    </aside>
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+        
+    <section class="hero">
+
+    <h1>Conecta SFX</h1>
+
+    <p>
+        Bem-vindo ao Conecta SFX, o portal centralizado para todas as suas necessidades de notícias locais. Aqui, você pode acessar as últimas notícias, publicar suas próprias histórias e se conectar com a comunidade local. Explore nossos serviços e fique por dentro de tudo o que acontece na região.
+    </p>
+
+</section>
+        <header class="topbar">
+
+            <div>
+                <h1>Pagina Inicial</h1>
+            </div>
+
+            <button class="refresh-btn">
+                Atualizar
+            </button>
+
+        </header>
+
+
+        <!-- SERVICES -->
+
+        <section class="services">
+
+            <div class="section-title">
+                <h2>O que você encontra aqui?</h2>
+            </div>
+
+            <div class="service-list">
+
+                <div class="service-card">
+
+                    <div class="service-info">
+                        <h3>Notícias em tempo real</h3>
+                        <p>Fique por dentro sobre oque esta acontecendo agora em São Francisco Xavier.</p>
+                    </div>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="service-info">
+                        <h3>Conecte-se</h3>
+                        <p>Nosso portal permite que você se conecte com a comunidade local e compartilhe suas histórias.</p>
+                    </div>
+
+                </div>
+
+                <div class="service-card">
+
+                    <div class="service-info">
+                        <h3>Informação</h3>
+                        <p>São Francisco Xavier possui uma natureza diversa para ser explorada. Aqui, você também pode sanar suas dúvidas e socializar.</p>
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+        <!-- REQUEST PANEL -->
+
+        <section class="requests">
+
+            <div class="section-title">
+                <h2>Últimas Atualizações</h2>
+                <p>Atividade recente do sistema</p>
+            </div>
+
+            <div class="request-table">
+
+                <div class="request-row">
+                    <span class="method get">NEW</span>
+                    <p>/home</p>
+                </div>
+
+                <div class="request-row">
+                    <span class="method post">NEW</span>
+                    <p>/news</p>
+                </div>
+
+                <div class="request-row">
+                    <span class="method get">NEW</span>
+                    <p>/servicos</p>
+                </div>
+
+                <div class="request-row">
+                    <span class="method get">NEW</span>
+                    <p>/perfil</p>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+    
+    <div class="chat-toggle" onclick="toggleChat()">
+    💬
+</div>
+<div class="chat-box" id="chatBox">
+
+    <div class="chat-header">
+
+        <span>IPC Chat</span>
+
+        <button class="close-btn" onclick="toggleChat()">
+            ✖
+        </button>
+
+    </div>
+
+    <div class="chat-messages" id="chatMessages">
+
+        <div class="message bot">
+            Sistema iniciado com sucesso.
+        </div>
+
+    </div>
+
+    <div class="chat-input">
+
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Digite..."
+        >
+
+        <button onclick="sendMessage()">
+            Enviar
+        </button>
+
+    </div>
+
+</div>
+    
+    <script src="home.js"></script>
 </body>
 </html>
-
 
